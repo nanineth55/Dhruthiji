@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=1.0">
+    <title>Sorry Dhruthi</title>	    
+    <link type="text/css" rel="stylesheet" href="./file/default.css">
+    <script type="text/javascript" src="./file/jquery.min.js"></script>
+    <script type="text/javascript" src="./file/jscex.min.js"></script>
+    <script type="text/javascript" src="./file/jscex-parser.js"></script>
+    <script type="text/javascript" src="./file/jscex-jit.js"></script>
+    <script type="text/javascript" src="./file/jscex-builderbase.min.js"></script>
+    <script type="text/javascript" src="./file/jscex-async.min.js"></script>
+    <script type="text/javascript" src="./file/jscex-async-powerpack.min.js"></script>
+    <script type="text/javascript" src="./file/functions.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./file/love.js" charset="utf-8"></script>
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+        }
+    </script>
+</head>
+<body>
+    <div id="main">
+        <div id="error"><a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a> (<a href="http://firefox.com.cn/download/">Firefox</a>)</div>
+        <audio autoplay="autoplay" height="100" width="100" id="myAudio">
+            <source src="ado.opus" type="audio/ogg; codecs=opus" />
+            <embed height="100" width="100" src="ado.opus" />
+        </audio>
+        <div id="wrap">
+            <div id="text">
+                <div id="code">
+                    <p>Honestly, I want to apologize for the way I was talking about other girls' things with you And yes, I know I hurt you Ala vere girls gurinchi matladakunda undalsindi It was wrong, and I completely understand why you're angry with me I'm not going to make excuses for it because naa mistake, and I accept it...! My words hurt the person I love most.</p>
+
+                    <p>I want you to know one thing clearly right now  I'm talking only to you. I'm not looking for anyone else, talking to anyone else, or giving that kind of attention to anyone else Asalu mak evvarigurichi nak avsarmledu I need you only, Dhruthi... And I don't want to be the person who makes you feel insecure or disrespected because of some stupid conversation</p>
+
+                    <p>I promise you, malli yeppudu kuda vere ammaila gurinchi nee daggara nenu matladanu. Actually, cheppakapothe you might feel even worse later... I don't want to hide things like this from you, because if you find out in a different situation, it will hurt you even more</p>
+
+                    <p>And one thing I clearly want to say:) you're not just "someone" in my life You're my girl ❤️ And I want to treat you with the respect and care you deserve</p>
+
+                    <p>Alagee naku telusu  saying sorry won't immediately fix everything, andhuke nuvvu inka chala kopam lo unnav And you know, ninnu ala kopam lo chusthe naaku asalu nachadu. It hurts me a lot, dear Dhruthi Yk I love you so much, nuvvante naaku chala ishtam  you already know that</p>
+
+                    <p>You mean more to me than anything; I never want to lose you for any reason</p>
+
+                    <p>I'm sorry for hurting you, Dhruthi :) And most importantly, I'm sorry for making the girl I love feel like she wasn't enough because you are more than enough for me.... :)</p>
+
+                    <p>I love you, my girl 🤍 And I really don't want to lose you for some stupid things ur more than anything for me</p>
+
+                    <p><strong>Please forgive me, Dhruthi 🙏</strong><br>I love you, my dear pretty gorgeous girl ❤️</p>
+                </div>
+            </div>
+            <div id="clock-box">
+                <span id="clock">love You</span> <!--  if needed -->
+            </div>
+            <canvas id="canvas" width="1100" height="680"></canvas>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        var canvas = $('#canvas');
+		
+        if (!canvas[0].getContext) {
+            $("#error").show();
+            return false;
+        }
+
+        var width = canvas.width();
+        var height = canvas.height();        
+        canvas.attr("width", width);
+        canvas.attr("height", height);
+
+        var opts = {
+            seed: {
+                x: width / 2 - 20,
+                color: "rgb(190, 26, 37)",
+                scale: 2
+            },
+            branch: [
+                [535, 680, 570, 250, 500, 200, 30, 100, [
+                    [540, 500, 455, 417, 340, 400, 13, 100, [
+                        [450, 435, 434, 430, 394, 395, 2, 40]
+                    ]],
+                    [550, 445, 600, 356, 680, 345, 12, 100, [
+                        [578, 400, 648, 409, 661, 426, 3, 80]
+                    ]],
+                    [539, 281, 537, 248, 534, 217, 3, 40],
+                    [546, 397, 413, 247, 328, 244, 9, 80, [
+                        [427, 286, 383, 253, 371, 205, 2, 40],
+                        [498, 345, 435, 315, 395, 330, 4, 60]
+                    ]],
+                    [546, 357, 608, 252, 678, 221, 6, 100, [
+                        [590, 293, 646, 277, 648, 271, 2, 80]
+                    ]]
+                ]] 
+            ],
+            bloom: {
+                num: 700,
+                width: 1080,
+                height: 650,
+            },
+            footer: {
+                width: 1200,
+                height: 5,
+                speed: 10,
+            }
+        }
+
+        var tree = new Tree(canvas[0], width, height, opts);
+        var seed = tree.seed;
+        var foot = tree.footer;
+        var hold = 1;
+
+        canvas.click(function(e) {
+            playAudio();
+            var offset = canvas.offset(), x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            if (seed.hover(x, y)) {
+                hold = 0; 
+                canvas.unbind("click");
+                canvas.unbind("mousemove");
+                canvas.removeClass('hand');
+            }
+        }).mousemove(function(e) {
+            var offset = canvas.offset(), x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            canvas.toggleClass('hand', seed.hover(x, y));
+        });
+
+        var seedAnimate = eval(Jscex.compile("async", function () {
+            seed.draw();
+            while (hold) {
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canScale()) {
+                seed.scale(0.95);
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canMove()) {
+                seed.move(0, 2);
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+        }));
+
+        var growAnimate = eval(Jscex.compile("async", function () {
+            do {
+                tree.grow();
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canGrow());
+        }));
+
+        var flowAnimate = eval(Jscex.compile("async", function () {
+            do {
+                tree.flower(2);
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canFlower());
+        }));
+
+        var moveAnimate = eval(Jscex.compile("async", function () {
+            tree.snapshot("p1", 240, 0, 610, 680);
+            while (tree.move("p1", 500, 0)) {
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+            foot.draw();
+            tree.snapshot("p2", 500, 0, 610, 680);
+
+            canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
+            canvas.css("background", "#ffe");
+            $await(Jscex.Async.sleep(300));
+            canvas.css("background", "none");
+        }));
+
+        var textAnimate = eval(Jscex.compile("async", function () {
+            var code = $("#code");
+            var textBox = $("#text");
+            code.show();
+
+            // Auto-fit: shrink font size and spacing until everything fits
+            var maxHeight = textBox.height();
+            var fontSize = 15;
+            var lineH = 1.5;
+            var paraGap = 6;
+
+            function applyStyles() {
+                code.css({ "font-size": fontSize + "px", "line-height": lineH });
+                code.find("p").css("margin-bottom", paraGap + "px");
+            }
+
+            applyStyles();
+
+            // Shrink until content fits
+            while (code[0].scrollHeight > maxHeight && fontSize > 11) {
+                fontSize -= 0.2;
+                applyStyles();
+            }
+
+            // Split each paragraph into word spans
+            code.find("p").each(function() {
+                var para = $(this);
+                var html = para.html();
+                // Wrap each word in a hidden span, preserve HTML tags like <strong><br>
+                var wrapped = html.replace(/(<[^>]+>)|(\S+)/g, function(match, tag, word) {
+                    if (tag) return tag; // keep HTML tags as-is
+                    return '<span class="word" style="opacity:0;transition:opacity 0.15s ease;">' + word + '</span> ';
+                });
+                para.html(wrapped);
+                para.css("opacity", 1); // show paragraph container immediately
+            });
+
+            // Reveal words one by one
+            var allWords = code.find(".word");
+            var delay = 0;
+            var wordDelay = 200; // ms between each word
+            allWords.each(function() {
+                var word = $(this);
+                setTimeout(function() {
+                    word.css("opacity", 1);
+                }, delay);
+                delay += wordDelay;
+            });
+        }));
+	    
+        var runAsync = eval(Jscex.compile("async", function () {
+            $await(seedAnimate());
+            $await(growAnimate());
+            $await(flowAnimate());
+            $await(moveAnimate());
+            textAnimate().start();
+        }));
+
+        runAsync().start();
+    })();
+    </script>
+</body>
+</html>
